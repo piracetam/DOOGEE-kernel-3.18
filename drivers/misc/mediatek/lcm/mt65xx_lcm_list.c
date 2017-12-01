@@ -34,7 +34,10 @@ LCM_DSI_MODE_CON lcm_dsi_mode;
 #endif
 
 LCM_DRIVER *lcm_driver_list[] = {
-
+	
+#if defined(RM68200_DSI_H)
+&rm68200_dsi_lcm_drv,
+#endif
 #if defined(HCT_OTM1285A_DSI_VDO_HD_BOE)
 &hct_otm1285a_dsi_vdo_hd_boe,
 #endif
